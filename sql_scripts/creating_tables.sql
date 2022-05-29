@@ -1,6 +1,12 @@
+drop table if exists comment;
+drop table if exists post;
+drop table if exists friendship;
+drop table if exists user_profile;
+
+
 create table if not exists user_profile (id smallint unsigned primary key auto_increment,
                                         email varchar(30) unique not null , pass varchar(30), name varchar(20),
-                                        last_name varchar(20), dob date);
+                                        last_name varchar(20), race varchar(20), dob varchar(50));
 
 create table if not exists post (id smallint unsigned primary key auto_increment, id_user smallint unsigned,
                                 foreign key (id_user) references user_profile(id), post_content text,
