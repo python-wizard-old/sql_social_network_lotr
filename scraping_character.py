@@ -98,14 +98,17 @@ def scrape_character(character):
 	dick_char['email'] = email
 
 	dick_char['pass'] = gen_random_password()
+	dick_char['user'] = first_name.lower().split()[0];
 
 	return dick_char
+
 
 def gen_parenthesis(entry):
 	if entry != 'NULL':
 		entry = "\'" + entry + "\'"
 
 	return entry
+
 
 def convert_dict(profile_dict):
 	dict_parenthesis = {}
@@ -116,10 +119,11 @@ def convert_dict(profile_dict):
 
 
 def gen_sql(profile_dict):
-	sql_string = "insert into user_profile (email, pass, name, last_name, race, dob) value (" + profile_dict["email"] + \
-	             ", " + profile_dict["pass"] + ", " + profile_dict["first_name"] + ", " + profile_dict["last_name"] + \
-	             ", " + profile_dict["race"] + ", " + profile_dict["dob"] + ");\n"
+	sql_string = "insert into user_profile (user, email, pass, name, last_name, race, dob) value (" + profile_dict["user"] \
+	             + ", " + profile_dict["email"] + ", " + profile_dict["pass"] + ", " + profile_dict["first_name"] + ", " \
+	             + profile_dict["last_name"] + ", " + profile_dict["race"] + ", " + profile_dict["dob"] + ");\n"
 	return sql_string
+
 
 def character_to_query(character):
 	scraped_dict = scrape_character(character)
@@ -129,6 +133,7 @@ def character_to_query(character):
 
 	return sql_query
 
+
 def queries_to_file(character_list):
 	f = open('insert_charecters.sql', 'w')
 
@@ -137,6 +142,7 @@ def queries_to_file(character_list):
 		f.write(query)
 
 	f.close()
+
 
 # characters = ["Gollum", "Aragorn_II_Elessar", "Sauron", "Gandalf", "Bilbo_Baggins", "Frodo_Baggins"]
 #
