@@ -1,6 +1,32 @@
 import requests
 from bs4 import BeautifulSoup
 
+import string
+import random
+
+## characters to generate password from
+
+
+
+def gen_random_password():
+	characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
+	length = 8
+
+	## shuffling the characters
+	random.shuffle(characters)
+
+	## picking random characters from the list
+	password = []
+	for i in range(length):
+		password.append(random.choice(characters))
+
+	## shuffling the resultant password
+	random.shuffle(password)
+
+	## converting the list to string
+	## printing the list
+	return "".join(password)
+
 
 def gen_email(first_name, last_name):
 	if last_name == "NULL":
@@ -71,6 +97,8 @@ def scrape_character(character):
 	email = gen_email(first_name, last_name)
 	dick_char['email'] = email
 
+	dick_char['pass'] = gen_random_password()
+
 	return dick_char
 
 def gen_parenthesis(entry):
@@ -115,7 +143,7 @@ def queries_to_file(character_list):
 # queries_to_file(characters)
 
 def read_characters_file(filename):
-	f = open('../characters.txt', 'r')
+	f = open(filename, 'r')
 
 	lines = f.readlines()
 	print("Length: ", len(lines))
