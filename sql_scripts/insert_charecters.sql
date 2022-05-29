@@ -1,0 +1,10 @@
+insert into user_profile (email, name, last_name, race, dob) value ('Gollum@shiremail.com', 'Gollum', NULL, 'Hobbits', 'TA 2430');
+insert into user_profile (email, name, last_name, race, dob) value ('Aragorn.Elessar@shiremail.com', 'Aragorn II', 'Elessar', 'Men', 'March 1, TA 2931');
+insert into user_profile (email, name, last_name, race, dob) value ('Sauron@shiremail.com', 'Sauron', NULL, 'Ainur (Maiar)', 'Before the Ainulindalë');
+insert into user_profile (email, name, last_name, race, dob) value ('Gandalf@shiremail.com', 'Gandalf', NULL, 'Ainur (Maiar)', 'Before the Shaping of Arda');
+insert into user_profile (email, name, last_name, race, dob) value ('Bilbo.Baggins@shiremail.com', 'Bilbo', 'Baggins', 'Hobbits', '22 September, TA 2890 (SR 1290)');
+insert into user_profile (email, name, last_name, race, dob) value ('Frodo.Baggins@shiremail.com', 'Frodo', 'Baggins', NULL, 'September 22, TA 2968 (SR 1368)');
+insert into user_profile (email, name, last_name, race, dob) value ('Bombur@shiremail.com', 'Bombur', NULL, 'Dwarves', NULL);
+insert into user_profile (email, name, last_name, race, dob) value ('Galion@shiremail.com', 'Galion', NULL, 'Elves', NULL);
+insert into user_profile (email, name, last_name, race, dob) value ('Bard@shiremail.com', 'Bard', NULL, 'Men', NULL);
+insert into user_profile (email, name, last_name, race, dob) value ('Roäc@shiremail.com', 'Roäc', NULL, 'Raven', 'TA 2788');
