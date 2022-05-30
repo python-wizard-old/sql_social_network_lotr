@@ -13,6 +13,8 @@ insert into post (id_user, creation_datetime, post_content) value ((select id fr
 insert into post (id_user, creation_datetime, post_content) value ((select id from user_profile where name='Bilbo'),
     now(), "I want to swim in the gold in the Dragon Mountain");
 
-# Frodo
 insert into post (id_user, creation_datetime, post_content) value ((select id from user_profile where name='Bilbo'),
-    now(), "");
+    now(), "I should have kept the ring, I shouldn't tell Gandalf about the ring.");
+
+# Frodo
+

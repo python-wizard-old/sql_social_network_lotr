@@ -3,9 +3,9 @@ insert into user_profile (user, email, pass, name, last_name, race, dob) value (
 insert into user_profile (user, email, pass, name, last_name, race, dob) value ('sauron', 'sauron@shiremail.com', 'qD7mDF$1', 'Sauron', NULL, 'Ainur (Maiar)', 'Before the Ainulindalë');
 insert into user_profile (user, email, pass, name, last_name, race, dob) value ('gandalf', 'gandalf@shiremail.com', 'xmW5OP^m', 'Gandalf', NULL, 'Ainur (Maiar)', 'Before the Shaping of Arda');
 insert into user_profile (user, email, pass, name, last_name, race, dob) value ('bilbo', 'bilbo.baggins@shiremail.com', '4A#Z85Q4', 'Bilbo', 'Baggins', 'Hobbits', '22 September, TA 2890 (SR 1290)');
-insert into user_profile (user, email, pass, name, last_name, race, dob) value ('frodo', 'frodo.baggins@shiremail.com', 'hKP$I(zQ', 'Frodo', 'Baggins', NULL, 'September 22, TA 2968 (SR 1368)');
+insert into user_profile (user, email, pass, name, last_name, race, dob) value ('frodo', 'frodo.baggins@shiremail.com', 'hKP$I(zQ', 'Frodo', 'Baggins', 'Hobbits', '22 September, TA 2968 (SR 1368)');
 insert into user_profile (user, email, pass, name, last_name, race, dob) value ('bombur', 'bombur@shiremail.com', '3lEEb8HA', 'Bombur', NULL, 'Dwarves', NULL);
 insert into user_profile (user, email, pass, name, last_name, race, dob) value ('galion', 'galion@shiremail.com', 'w4v90SBz', 'Galion', NULL, 'Elves', NULL);
 insert into user_profile (user, email, pass, name, last_name, race, dob) value ('samwise', 'samwi.gamgee@shiremail.com', 'LOEsVuDO', 'Samwise', 'Gamgee', 'Hobbits', 'April 6, TA 2980/SR 1380');
 insert into user_profile (user, email, pass, name, last_name, race, dob) value ('glóin', 'glóin@shiremail.com', '3!!(@Z6V', 'Glóin', NULL, 'Dwarves', 'TA 2783');
-insert into user_profile (user, email, pass, name, last_name, race, dob) value ('elrond', 'elrond@shiremail.com', '^F0lPPVk', 'Elrond', NULL, 'Half-elven (chose to be immortal)', 'FA 532[1]');
+insert into user_profile (user, email, pass, name, last_name, race, dob) value ('elrond', 'elrond@shiremail.com', '^F0lPPVk', 'Elrond', NULL, 'Half-elven', 'FA 532[1]');

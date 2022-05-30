@@ -18,9 +18,9 @@ begin
 end $
 delimiter ;
 
-drop trigger if exists after_follow;
+drop trigger if exists log_after_follow;
 delimiter $
-create trigger after_follow before insert on follow
+create trigger log_after_follow before insert on follow
 for each row
 begin
 
@@ -30,11 +30,11 @@ begin
 end $
 delimiter ;
 
-select * from logs_follow;
 
-drop trigger if exists after_unfollow;
+
+drop trigger if exists log_after_unfollow;
 delimiter $
-create trigger after_unfollow after delete on follow
+create trigger log_after_unfollow after delete on follow
 for each row
 begin
 
@@ -44,4 +44,5 @@ begin
 end $
 delimiter ;
 
-select * from logs_follow;
+# select * from logs_follow;
+# select * from logs_follow;
