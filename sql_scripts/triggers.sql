@@ -8,7 +8,7 @@ for each row
 begin
     if new.follow_source = new.follow_target
     then
-        signal sqlstate '45000' set message_text = "One cannot follow oneself, follow  and sourcetarget have to be different";
+        signal sqlstate '45000' set message_text = "One cannot follow oneself, source and target have to be different";
     end if ;
 
     if (select count(*) from follow where follow_source = new.follow_source and follow_target = new.follow_target) > 0

@@ -39,7 +39,6 @@ end $
 delimiter ;
 
 
-
 drop procedure if exists stream;
 delimiter $
 create procedure stream(user_in varchar(15))
@@ -52,7 +51,33 @@ begin
 end $
 delimiter ;
 
-call print_all();
-call follow('gandalf', 'bilbo');
-call wall_user('gollum');
-call stream('sauron');
+drop procedure if exists comment;
+delimiter $
+create procedure comment(user_in varchar(15), slug_in varchar(30), comment_text varchar(100))
+deterministic
+begin
+insert into comment (id_user, id_post, comment_text, creation_datetime) VALUE ((select id from user_profile where user = user_in),
+    (select id from post where slug = slug_in), comment_text, now());
+    select * from comment c join post p on c.id_post = p.id where p.slug = slug_in;
+#     select post_content, creation_datetime from post where id_user = (select id from user_profile where user = user_in);
+end $
+delimiter ;
+
+# select * from post;
+#
+# select id from user_profile where user = 'gandalf';
+# insert into comment (id_user, id_post, , creation_datetime) ()
+#
+# insert into comment (id_user, id_post, comment_text, creation_datetime) VALUE (6, (select id from post where slug= 'bilbo-beorn'),
+#     "I'm glad you found him.", now());
+# # 'I'm glad you found him.'
+#
+# select * from user_profile; # gandalf 6
+# select * from post where slug= 'bilbo-beorn';
+# select * from comment natural join post ;; # gandalf 6
+
+
+# call print_all();
+
+# call wall_user('gollum');
+# call stream('sauron');
