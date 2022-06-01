@@ -6,10 +6,10 @@ call comment('gandalf', 'bilbo-visited-dwarfes', "Like!");
 call comment('gandalf', 'bilbo-beorn', "I'm glad you found him.");
 call comment('beorn', 'bilbo-beorn', "Like!");
 
-call comment('gollum', 'bilbo-beorn', "You evil hobbit, return the ring to the master!");
-call comment('gollum', 'bilbo-beorn', "Where is my precious?");
+call comment('gollum', 'bilbo-discovered-ring', "You evil hobbit, return the ring to the master!");
+call comment('gollum', 'bilbo-discovered-ring', "Where is my precious?");
 
-call comment('gandalf', 'bilbo-beorn', "You've done the right thing, my friend!");
+call comment('gandalf', 'bilbo-regrets-giving-away-ring', "You've done the right thing, my friend!");
 
 # Gollum
 # "I defeated Deagor to get the ring."

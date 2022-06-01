@@ -99,5 +99,5 @@ insert into post (id_user, creation_datetime, slug, post_content) value ((select
     '3008-04-27 19:18:15.0', "bombur-diet-bilbo", "I'm on a diet at Bilbo's place.");
 
 # Galion - Elf
-insert into post (id_user, creation_datetime, slug, post_content) value ((select id from user_profile where name='Bombur'),
+insert into post (id_user, creation_datetime, slug, post_content) value ((select id from user_profile where name='Galion'),
     '3008-09-20 19:18:15.0', "galion-bilbo-escaped", "Bilbo stole keys and escaped with the Dwarfes. Catch them.");
