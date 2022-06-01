@@ -62,22 +62,3 @@ insert into comment (id_user, id_post, comment_text, creation_datetime) VALUE ((
 #     select post_content, creation_datetime from post where id_user = (select id from user_profile where user = user_in);
 end $
 delimiter ;
-
-# select * from post;
-#
-# select id from user_profile where user = 'gandalf';
-# insert into comment (id_user, id_post, , creation_datetime) ()
-#
-# insert into comment (id_user, id_post, comment_text, creation_datetime) VALUE (6, (select id from post where slug= 'bilbo-beorn'),
-#     "I'm glad you found him.", now());
-# # 'I'm glad you found him.'
-#
-# select * from user_profile; # gandalf 6
-# select * from post where slug= 'bilbo-beorn';
-# select * from comment natural join post ;; # gandalf 6
-
-
-# call print_all();
-
-# call wall_user('gollum');
-# call stream('sauron');

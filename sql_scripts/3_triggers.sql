@@ -18,6 +18,7 @@ begin
 end $
 delimiter ;
 
+# logging trigger after follow
 drop trigger if exists log_after_follow;
 delimiter $
 create trigger log_after_follow before insert on follow
@@ -31,7 +32,7 @@ end $
 delimiter ;
 
 
-
+# logging trigger after unfollow
 drop trigger if exists log_after_unfollow;
 delimiter $
 create trigger log_after_unfollow after delete on follow
@@ -43,6 +44,3 @@ begin
 
 end $
 delimiter ;
-
-# select * from logs_follow;
-# select * from logs_follow;

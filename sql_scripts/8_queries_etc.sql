@@ -2,6 +2,9 @@
 call wall_user('gollum');
 call stream('sauron');
 
+# showing log table
+select * from logs_follow;
+
 # check comments
 select * from comment join post p on comment.id_post = p.id;
 
