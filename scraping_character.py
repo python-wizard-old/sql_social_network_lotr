@@ -135,7 +135,7 @@ def character_to_query(character):
 
 
 def queries_to_file(character_list):
-	f = open('insert_charecters.sql', 'w')
+	f = open('2_insert_characters.sql', 'w')
 
 	for ch in character_list:
 		query = character_to_query(ch)
