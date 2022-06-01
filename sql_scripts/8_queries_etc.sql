@@ -1,6 +1,6 @@
 # callilng procedures
 call wall_user('gollum');
-call stream('sauron');
+call stream('gandalf');
 
 # showing log table
 select * from logs_follow;

@@ -45,7 +45,7 @@ create procedure stream(user_in varchar(15))
 deterministic
 begin
 
-    select p.post_content, p.creation_datetime, u.name from post as p natural join user_profile as u where id_user in
+    select p.post_content, p.creation_datetime, u.name from post as p join user_profile as u on p.id_user = u.id where id_user in
         (select follow_target from follow where follow_source = (select id from user_profile where user = user_in));
 #     select post_content, creation_datetime from post where id_user = (select id from user_profile where user = user_in);
 end $
