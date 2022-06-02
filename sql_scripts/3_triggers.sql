@@ -18,6 +18,7 @@ begin
 end $
 delimiter ;
 
+
 # logging trigger after follow
 drop trigger if exists log_after_follow;
 delimiter $
