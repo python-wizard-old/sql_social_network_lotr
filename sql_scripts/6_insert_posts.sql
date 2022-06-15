@@ -1,7 +1,7 @@
 # Hobbits
 # Bilbo
 insert into post (id_user, creation_datetime, slug, post_content) value ((select id from user_profile where name='Bilbo'),
-    '3008-04-27 19:18:15.0', "bilbo-visited-dwarfes", "I was visited by a group of dwarfes and a wizard. Weird.");
+    '3008-04-27 19:18:15.0', "bilbo-visited-dwarfes", "I was visited by a group of dwarfs and a wizard. Weird.");
 
 insert into post (id_user, creation_datetime, slug, post_content) value ((select id from user_profile where name='Bilbo'),
     '3008-07-10 19:18:15.0', "bilbo-discovered-ring", "I discovered preety ring. Maybe I should try it.");

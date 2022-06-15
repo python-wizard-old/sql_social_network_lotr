@@ -4,7 +4,7 @@ A project that creates tables inside a database to store information facilitatin
 
 It stores information about users, their posts, comments, who is following whom information and logs.
 
-Additionally, I made a few procedures that dispay posts of others that the user is following, display posts of a given user (wall) etc.
+Additionally, I made a few procedures that dispay posts of others that the user is following(stream), display posts of a given user (wall) etc.
 
 I also implemented: indexes (indexi), triggers (validations and logs) and some interesing queries - including joins.
 
@@ -36,6 +36,36 @@ Additinally trigger also checks whether the user is already following the person
 
 Well, don't follow Gollum twice :)
 
+#### log_after_follow / log_after_unfollow
+Database system logs when a user starts following or unfollows another user.
 
-To be continued...
+We want to know whom Gollum is following :)
 
+### [4_procedures.sql](sql_scripts/4_procedures.sql)
+#### wall_user
+Shows posts of a specific user - like wall.
+
+#### follow
+The procedure is used by a user to follow another user. It created all necessary table inserts within the procedure.
+
+#### stream
+Shows posts of all users that a specific person follows.
+
+It's a complex nested select statement.
+
+#### comment
+Procedure allows user to comment on a specific post of another user.
+It takes following arguments: user, slug_name(shortened version of the post title) and actual comment content. It's a complex insert statement.
+
+### [5_add_follows.sql](sql_scripts/5_add_follows.sql)
+Here I add about 50 follows, like Sauron following Gandals etc.
+
+### [6_insert_posts.sql](sql_scripts/6_insert_posts.sql)
+Here I add about 40 posts for different users, like Bilbo posts:
+"I was visited by a group of dwarfs and a wizard. Weird."
+
+### [7_add_comments.sql](sql_scripts/7_add_comments.sql)
+Here I add about 40 comments. For example Gandalf commented, after Bilbo posted about visiting Beorn: "I'm glad you found him."
+
+### [8_queries_etc.sql](sql_scripts/8_queries_etc.sql)
+Here I show less and more complex queries. I also do some 3-4 table joins.
